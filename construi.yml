@@ -15,7 +15,7 @@ targets:
   version:
     build: .
     entrypoint: []
-    run: /bin/bash -c "construi --version > VERSION"
+    run: /bin/bash -c "construi --version 2> VERSION"
 
   build: build
 

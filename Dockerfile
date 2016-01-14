@@ -3,3 +3,5 @@ MAINTAINER Levi Stephen <levi.stephen@gmail.com>
 
 RUN pip install construi
 
+ENTRYPOINT ["construi"]
+
