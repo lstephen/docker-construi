@@ -13,11 +13,13 @@ volumes:
 
 targets:
   version:
-    build: .
-    entrypoint: []
-    run: /bin/bash -c "construi --version 2> VERSION"
+    image: python:2.7
+    run: /bin/bash -c "pip install -I construi && construi --version 2> VERSION"
 
-  build: build
+  build:
+    before:
+      - version
+    run: build
 
   release:
     before:
