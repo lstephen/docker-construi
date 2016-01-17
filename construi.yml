@@ -15,7 +15,7 @@ targets:
   version:
     build: .
     entrypoint: []
-    run: /bin/bash -c "construi --version 2> VERSION"
+    run: /bin/bash -c "pip install -I construi && construi --version 2> VERSION"
 
   build: build
 
