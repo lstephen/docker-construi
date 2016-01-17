@@ -15,7 +15,7 @@ targets:
   construi-version:
     environment:
       - CONSTRUI_INFO_URL=https://pypi.python.org/pypi/construi/json
-    image: buildpack-deps:jessie
+    entrypoint: []
     run: >
       /bin/bash -c
       "curl -sS $CONSTRUI_INFO_URL | grep '\"version\"' | cut -d '\"' -f4
