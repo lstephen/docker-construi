@@ -13,8 +13,12 @@ volumes:
 
 targets:
   version:
-    image: python:2.7
-    run: /bin/bash -c "pip install -I construi && construi --version 2> VERSION"
+    environment:
+      - CONSTRUI_INFO_URL=https://pypi.python.org/pypi/construi/json
+    image: lstephen/versiune:5
+    run: >
+      -t "$version.$(curl -sS $CONSTRUI_INFO_URL | grep '\"version\"' | cut -d '\"' -f4)"
+      VERSION
 
   build:
     before:
