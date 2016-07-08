@@ -34,8 +34,8 @@ targets:
 
   release:
     before:
-      - version
+      - versuine
     volumes:
       - $GIT_SSH_KEY:/ssh/id_rsa
-    run: build release
+    run: release
 
