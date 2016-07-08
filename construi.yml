@@ -24,7 +24,7 @@ targets:
   versiune:
     before:
       - construi-version
-    image: lstephen/versiune:5
+    image: lstephen/versiune:17
     run: -t "$version.$(cat CONSTRUI_VERSION)" VERSION
 
   build:
