@@ -21,7 +21,7 @@ targets:
       "curl -sS $CONSTRUI_INFO_URL | grep '\"version\"' | cut -d '\"' -f4
       > CONSTRUI_VERSION"
 
-  version:
+  versiune:
     before:
       - construi-version
     image: lstephen/versiune:5
